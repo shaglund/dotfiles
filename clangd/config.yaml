@@ -1,0 +1,6 @@
+CompileFlags:
+  Add: [-Wno-missing-template-arg-list-after-template-kw]
+  CompilationDatabase: /home/sebastian/src/tb/build.x86_64-unknown-linux/db/user
+Diagnostics:
+  UnusedIncludes: Strict
+  MissingIncludes: Strict
