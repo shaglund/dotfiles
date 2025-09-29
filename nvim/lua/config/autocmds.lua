@@ -8,29 +8,30 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
 require("lazyvim.util").lsp.on_attach(function(client, buffer)
-  local augroup_id = vim.api.nvim_create_augroup("FormatModificationsDocumentFormattingGroup", { clear = false })
-  vim.api.nvim_clear_autocmds({ group = augroup_id, buffer = buffer })
+    local augroup_id = vim.api.nvim_create_augroup("FormatModificationsDocumentFormattingGroup", { clear = false })
+    vim.api.nvim_clear_autocmds({ group = augroup_id, buffer = buffer })
 
-  vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    group = augroup_id,
-    buffer = buffer,
-    callback = function()
-      local lsp_format_modifications = require("lsp-format-modifications")
-      lsp_format_modifications.format_modifications(client, buffer)
-    end,
-  })
+    vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+        group = augroup_id,
+        buffer = buffer,
+        callback = function()
+            local lsp_format_modifications = require("lsp-format-modifications")
+            lsp_format_modifications.format_modifications(client, buffer)
+        end,
+    })
 end)
 
 local set_autoformat = function(pattern, bool_val)
-  vim.api.nvim_create_autocmd({ "FileType" }, {
-    pattern = pattern,
-    callback = function()
-      vim.b.autoformat = bool_val
-    end,
-  })
+    vim.api.nvim_create_autocmd({ "FileType" }, {
+        pattern = pattern,
+        callback = function()
+            vim.b.autoformat = bool_val
+        end,
+    })
 end
 
 set_autoformat({ "cpp" }, false)
+set_autoformat({ "c" }, false)
 -- set_autoformat({ "fish" }, false)
 -- set_autoformat({ "lua" }, false)
 -- set_autoformat({ "perl" }, false)

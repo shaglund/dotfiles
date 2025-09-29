@@ -2,7 +2,9 @@
 # VERSION: 3.0
 SETUVAR --path ADMIN_TOOLS_PATH:/home/sebastian/src/tb/build\x2ex86_64\x2dunknown\x2dlinux/bin
 SETUVAR --export BASH_ENV:/home/sebastian/\x2ebash_env
-SETUVAR --export JAVA_HOME:/usr/lib/jvm/java\x2d17\x2dopenjdk\x2damd64/
+SETUVAR --export CLANG_FORMAT_DIFF:python3\x20/home/sebastian/bin/clang\x2dformat\x2ddiff\x2epy
+SETUVAR --export INFORMIXDIR:/home/sebastian/src/ts/thirdparty/informix/x86_64\x2dunknown\x2dlinux/64
+SETUVAR --export JAVA_HOME:/usr/lib/jvm/default\x2djava
 SETUVAR --export MK_BUILD_SYSTEM:/home/sebastian/src/tb/toolchain/makefiles
 SETUVAR --export NODE:BR\x2d8525487838
 SETUVAR --export SDK:/home/sebastian/src/tb/build\x2ex86_64\x2dunknown\x2dlinux/sdk/
@@ -12,6 +14,7 @@ SETUVAR --export TB_SYSTEM_NAME:haglunds_sys
 SETUVAR --export TB_SYSTEM_PREFIX:seba_
 SETUVAR TB_SYSTEM_ROOT:/home/sebastian/tb_system
 SETUVAR --export TB_USERNAME:seba
+SETUVAR --export THREADLIB:POSIX
 SETUVAR --export --path TOOLCHAIN_PATH:/home/sebastian/src/tb/toolchain/x86_64\x2dunknown\x2dlinux/bin
 SETUVAR __fish_initialized:3800
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
@@ -45,4 +48,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/sebastian/src/tb/toolchain/x86_64\x2dunknown\x2dlinux/bin\x1e/home/sebastian/src/tb/build\x2ex86_64\x2dunknown\x2dlinux/bin
+SETUVAR fish_user_paths:/home/sebastian/src/ts/thirdparty/informix/x86_64\x2dunknown\x2dlinux/64/bin\x1e/home/sebastian/src/tb/toolchain/x86_64\x2dunknown\x2dlinux/bin\x1e/home/sebastian/src/tb/build\x2ex86_64\x2dunknown\x2dlinux/bin

@@ -7,8 +7,7 @@ return {
     },
   },
 
-  { "stevearc/conform.nvim",                      enabled = false },
+    { "stevearc/conform.nvim",                      enabled = true },
 
   { "joechrisellis/lsp-format-modifications.nvim" },
-
 }
