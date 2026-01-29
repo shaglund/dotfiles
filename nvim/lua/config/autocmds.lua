@@ -15,8 +15,10 @@ require("snacks.util").lsp.on(function(buffer, client)
     group = augroup_id,
     buffer = buffer,
     callback = function()
-      local lsp_format_modifications = require("lsp-format-modifications")
-      lsp_format_modifications.format_modifications(client, buffer)
+      if client.server_capabilities.documentFormattingProvider then
+        local lsp_format_modifications = require("lsp-format-modifications")
+        lsp_format_modifications.format_modifications(client, buffer)
+      end
     end,
   })
 end)
